@@ -13,7 +13,9 @@ if ( 'POST' != $_SERVER['REQUEST_METHOD'] ) {
 }
 
 /** Sets up the WordPress Environment. */
-require_once($_SERVER['DOCUMENT_ROOT']."/wp-load.php"); // 此 comments-ajax.php 位於主題資料夾,所以位置已不同
+// 这里到实际环境要改一下
+require_once($_SERVER['DOCUMENT_ROOT']."wordpress/wp-load.php"); // 此 comments-ajax.php 位於主題資料夾,所以位置已不同
+
 
 nocache_headers();
 
