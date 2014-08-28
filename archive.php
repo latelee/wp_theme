@@ -48,7 +48,8 @@
 			<?php if ($options['author']) : ?><span class="author"><?php the_author_posts_link(); ?></span><?php endif; ?>
 			<?php edit_post_link(__('Edit', 'inove'), '<span class="editpost">', '</span>'); ?>
 			<span class="comments"><?php comments_popup_link(__('No comments', 'inove'), __('1 comment', 'inove'), __('% comments', 'inove'), '', __('Comments off', 'inove')); ?></span>
-			<div class="fixed"></div>
+			<span class="comments"><?php the_views();   ?></span>
+            <div class="fixed"></div>
 		</div>
 		<div class="content">
 			<?php the_content(__('Read more...', 'inove')); ?>

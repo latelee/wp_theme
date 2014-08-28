@@ -474,7 +474,30 @@ class iNoveOptions {
 <?php
 	}
 }
+/**
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0¡ä); return "0";
+    }
+    return $count.'';
+}
 
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0¡ä);
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+*/
 // register functions
 add_action('admin_menu', array('iNoveOptions', 'add'));
 

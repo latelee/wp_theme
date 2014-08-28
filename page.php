@@ -10,6 +10,7 @@
 			<?php if ($comments || comments_open()) : ?>
 				<span class="addcomment"><a href="#respond"><?php _e('Leave a comment', 'inove'); ?></a></span>
 				<span class="comments"><a href="#comments"><?php _e('Go to comments', 'inove'); ?></a></span>
+                <span class="comments"><?php the_views();?>&nbsp;  &nbsp;</span>
 			<?php endif; ?>
 			<div class="fixed"></div>
 		</div>

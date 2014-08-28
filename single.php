@@ -10,14 +10,19 @@
 	</div>
 
 	<div class="post" id="post-<?php the_ID(); ?>">
-		<h2><?php the_title(); ?></h2>
+		<h2><?php the_title(); ?></h2> 
+
 		<div class="info">
 			<span class="date"><?php the_time(__('F jS, Y', 'inove')) ?></span>
+            
 			<?php if ($options['author']) : ?><span class="author"><?php the_author_posts_link(); ?></span><?php endif; ?>
-			<?php edit_post_link(__('Edit', 'inove'), '<span class="editpost">', '</span>'); ?>
+
+            <?php edit_post_link(__('Edit', 'inove'), '<span class="editpost">', '</span>'); ?>
 			<?php if ($comments || comments_open()) : ?>
-				<span class="addcomment"><a href="#respond"><?php _e('Leave a comment', 'inove'); ?></a></span>
+				
+                <span class="addcomment"><a href="#respond"><?php _e('Leave a comment', 'inove'); ?></a></span>
 				<span class="comments"><a href="#comments"><?php _e('Go to comments', 'inove'); ?></a></span>
+                <span class="comments"><?php the_views();?>&nbsp;&nbsp;</span>
 			<?php endif; ?>
 			<div class="fixed"></div>
 		</div>
@@ -25,6 +30,18 @@
 			<?php the_content(); ?>
 			<div class="fixed"></div>
 		</div>
+
+<div style="text-align:center; margin-top: 15px; ">
+<strong>
+    this post: <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+		<?php the_permalink(); ?></a>.
+</strong>
+</div>
+<div style="text-align:center;margin-bottom: 50px;">
+<strong>
+        from<a href="<?php echo get_settings('home'); ?>" title="blog">Late Lee's blog</a>. All rights reversed
+</strong>
+</div>
 		<div class="under">
 			<?php if ($options['categories']) : ?><span class="categories"><?php _e('Categories: ', 'inove'); ?></span><span><?php the_category(', '); ?></span><?php endif; ?>
 			<?php if ($options['tags']) : ?><span class="tags"><?php _e('Tags: ', 'inove'); ?></span><span><?php the_tags('', ', ', ''); ?></span><?php endif; ?>
