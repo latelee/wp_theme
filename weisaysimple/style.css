@@ -37,9 +37,9 @@ a:hover{text-decoration:underline}
 #searchform button,#searchform #searchsubmit{width:58px;text-align:center;height:26px;line-height:26px;background:#666;margin-left:-4px;border:none;color:#fff;cursor:pointer;vertical-align:middle;text-shadow:1px 1px #333;}
 .search button:hover,.main ul li h2 a:link,.main ul li h2 a:visited,.main .left h2 a:link,.main .left h2 a:visited{color:#222;}
 /*blogname和blogtitle将logo图片和文字放到同一行*/
-#blogname{float:right;font-size:24px;padding-left:25px;margin-top:20px;}
-#blogname a:link,#blogname a:visited{float:right;color:#222;}
-#blogname a:hover,.main ul li h2 a:hover,.main .left h2 a:hover{float:right;color:#626262;text-decoration:none;}
+#blogname{font-size:24px;padding-left:25px;margin-top:20px;}
+#blogname a:link,#blogname a:visited{color:#222;}
+#blogname a:hover,.main ul li h2 a:hover,.main .left h2 a:hover{color:#626262;text-decoration:none;}
 #blogtitle{padding-left:20px;padding-top:10px;color:#666;font-size:14px;font-weight:normal;}
 .logo{float:left;display:inline;background:url(images/logo.gif) no-repeat;margin-top:13px;width:300px;height:60px;margin-left:10px;_margin-left:1px;}
 .topnav{float:left;width:820px;height:34px;padding:0;overflow:hidden;}
