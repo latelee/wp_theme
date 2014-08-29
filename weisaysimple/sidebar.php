@@ -3,16 +3,21 @@
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具1') ) : ?>
 	<?php endif; ?>
 </div>
+<div class="widget">
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具2') ) : ?>
+	<?php endif; ?>
+</div>
+<div class="widget">
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具3') ) : ?>
+	<?php endif; ?>
+</div>
 <div class="clear"></div>
 <div class="widget"><div id="tab-title"><?php include('includes/r_tab.php'); ?></div></div>
 
 <?php if (get_option('swt_ada') == 'Display') { ?>
 <div class="widget"><h3>广告</h3><?php echo stripslashes(get_option('swt_adacode')); ?></div><?php { echo ''; } ?><?php } else { } ?>
 
-<div class="widget">
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具2') ) : ?>
-	<?php endif; ?>
-</div>
+
 <div class="clear"></div>
 <div class="widget"><div class="top_comment">
 	<?php if (get_option('swt_wallreaders') == 'Hide') { ?>
@@ -20,10 +25,7 @@
 	<?php } else { include(TEMPLATEPATH . '/includes/top_comment.php'); } ?></div>
 </div>
 
-<div class="widget">
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具3') ) : ?>
-	<?php endif; ?>
-</div>
+
 <div class="clear"></div>
 <div class="widget"><?php include('includes/r_comment.php'); ?></div>
 
@@ -44,20 +46,7 @@
   get_currentuserinfo();
   if (!$user_ID) {
 ?>
-<form id="loginform" action="<?php echo get_settings('siteurl'); ?>/wp-login.php" method="post"><h3>用户登录</h3>
-<p>
-<label>用户名：<input class="login" type="text" name="log" id="log" value="" size="12" /></label>
-</p>
-<p>
-<label>密　码：<input class="login" type="password" name="pwd" id="pwd" value="" size="12" /></label>
-</p>
-<p>
-<input class="denglu" type="submit" name="submit" value="登陆" /> <label>记住我 <input id="comment_mail_notify" type="checkbox" name="rememberme" value="forever" /></label>
-</p>
-<p>
-<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
-</p>
-</form>
+
 <?php } 
 else { ?>
 <h3>用户管理</h3>

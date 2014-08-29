@@ -6,6 +6,9 @@
 	Author URI: http://www.weisay.com
 	Tags: weisay,weisaysimple,Simple,威言威语
 	Version: 1.62
+
+    Change by: Late Lee
+	Version:   1.62.1
 */
 *{border:0;margin:0;padding:0;}
 body{background:#fafafa url(images/bg.png) repeat;color:#333;font:13px "\5FAE\8F6F\96C5\9ED1",Verdana,Arial,Helvetica,sans-serif;}
@@ -19,7 +22,8 @@ a:hover{text-decoration:underline}
 /*中间那条直线*/
 #header{background:url(images/line.gif) repeat-x bottom;height:156px;}
 #top{width:990px;margin:0 auto;}
-#top_logo{float:left;height:90px;}
+/*由于整个网站的logo和标题都纳入top_logo这个div中，所以指定其宽度，宽度由下面的估算出来*/
+#top_logo{float:left;height:90px;width:480px;}
 .subpage{width:990px}
 .toppage{float:left;font-size:13px;position:relative;}
 .toppage ul{list-style:none;margin:0;padding:0;z-index:999;}
@@ -37,11 +41,11 @@ a:hover{text-decoration:underline}
 #searchform button,#searchform #searchsubmit{width:58px;text-align:center;height:26px;line-height:26px;background:#666;margin-left:-4px;border:none;color:#fff;cursor:pointer;vertical-align:middle;text-shadow:1px 1px #333;}
 .search button:hover,.main ul li h2 a:link,.main ul li h2 a:visited,.main .left h2 a:link,.main .left h2 a:visited{color:#222;}
 /*blogname和blogtitle将logo图片和文字放到同一行*/
-#blogname{font-size:24px;padding-left:25px;margin-top:20px;}
+#blogname{float:right;font-size:25px;padding-left:20px;margin-top:15px;}
 #blogname a:link,#blogname a:visited{color:#222;}
 #blogname a:hover,.main ul li h2 a:hover,.main .left h2 a:hover{color:#626262;text-decoration:none;}
-#blogtitle{padding-left:20px;padding-top:10px;color:#666;font-size:14px;font-weight:normal;}
-.logo{float:left;display:inline;background:url(images/logo.gif) no-repeat;margin-top:13px;width:300px;height:60px;margin-left:10px;_margin-left:1px;}
+#blogtitle{padding-left:25px;padding-top:5px;color:#666;font-size:14px;font-weight:normal;}
+.logo{float:left;display:inline;background:url(images/logo.gif) no-repeat;margin-top:15px;width:300px;height:60px;margin-left:10px;_margin-left:1px;}
 .topnav{float:left;width:820px;height:34px;padding:0;overflow:hidden;}
 .topnav li img{_padding-top:11px;}
 .topnav ul{list-style:none;margin:0;padding:0;position:absolute;z-index:999;}
@@ -107,7 +111,7 @@ i.sticky_ordinary{margin-right:4px;}
 .comments_num{float:right;font-size:12px;background:#dedede;padding:1px 3px 0 3px;line-height:20px;height:20px}
 .comments_num a:link,.comments_num a:visited{color:#555;text-shadow:1px 1px #eee;}
 .context{position:relative;overflow:hidden;}
-.context p{padding:5px 0px;margin:0;line-height:22px;text-indent:2em;}
+.context p{padding:5px 0px;margin:0;line-height:22px;font-size:16px;}
 .context h4{margin:10px 0 5px 0}
 .context h5{font-size:15px;padding:3px 8px;background:#ededed;border:1px #ddd solid;}
 .context ol{margin-left:20px}

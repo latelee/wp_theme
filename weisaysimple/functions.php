@@ -311,7 +311,7 @@ function weisay_end_comment() {
 		echo '</li>';
 }
 function weisay_copyright() {
-echo 'Theme by <a href="http://www.weisay.com/" rel="external">Weisay</a>.';
+echo 'Thanks <a href="http://www.weisay.com/" rel="external">Weisay</a> for the theme. Modified by <a href="http://www.latelee.org/">Late Lee</a>.';
 }
 add_action('wp_footer', 'weisay_copyright');
 

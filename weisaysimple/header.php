@@ -38,10 +38,7 @@
 <div id="top_logo">
             <?php if (get_option('swt_logo') == 'Display') { ?>
     <a href="<?php bloginfo('siteurl'); ?>" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"><div class="logo"></div></a>
-<!--
-        <div id="blogname"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
-        <div id="blogtitle"><?php bloginfo('description'); ?></div></div>
--->
+        <div id="blogname"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a><div id="blogtitle"><?php bloginfo('description'); ?></div></div>
 			<?php }else { include(TEMPLATEPATH . '/includes/logo.php'); } ?>
 </div>
 		<div class="search">		
