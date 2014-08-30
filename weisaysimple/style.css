@@ -90,24 +90,24 @@ a:hover{text-decoration:underline}
 .post_date .date_m{text-align:center;font-size:11px;padding-top:5px;font-family:Verdana}
 .post_date .date_d{padding-left:3px;text-align:center;font-size:25px;margin-top:-5px;font-family:Georgia,Arial,Tahoma,Geneva;font-weight:bold}
 .post_date .date_y{text-align:center;font-size:11px;font-family:Verdana}
-.article{float:right;width:620px;border-bottom:1px #ddd solid;overflow:hidden;}
+.article{float:left;width:620px;border-bottom:1px #ddd solid;overflow:hidden;}
 .article_page{width:680px;}
 .article li{list-style:none}
-.articles{float:right;width:620px;border-bottom:1px #ddd solid;padding:10px 0 10px 0;overflow:hidden}
+.articles{float:left;width:620px;border-bottom:1px #ddd solid;padding:10px 0 10px 0;overflow:hidden}
 .articles_page{width:680px;}
-.main ul li h2,.main .left h2{background:url(images/line.gif) repeat-x bottom;line-height:26px;padding:0 0 3px 80px;}
+.main ul li h2,.main .left h2{background:url(images/line.gif) repeat-x bottom;line-height:26px;padding:0 0 3px 0px;}
 .main ul li h2.post-sticky{padding:0 0 3px 38px;}
-.main .left_page h2{padding-left:10px;}
+.main .left_page h2{padding-left:0px;}
 .articles h3{font-size:15px;}
 .new{margin-left:2px;position:absolute}
 i.sticky{background:url(images/top.gif) no-repeat;display:inline-block;height:17px;width:31px;margin-right:10px;margin-top:-4px;*margin-top:-1px;overflow:hidden;vertical-align:middle;vertical-align:-2px \9;*vertical-align:middle;}
 i.sticky_ordinary{margin-right:4px;}
-.thumbnail{float:left;width:140px;height:100px;margin:17px 10px 8px 15px;_margin:17px 10px 8px 7px;padding:4px;border:1px solid #ccc;}
+.thumbnail{float:left;width:140px;height:100px;margin:17px 10px 8px 0;_margin:17px 10px 8px 7px;padding:4px;border:1px solid #ccc;}
 .thumbnail img{position:absolute;z-index:3;}
 .entry_post{line-height:22px;padding-top:12px;}
 .more{float:right;font-size:12px;margin:-3px 0 8px 0;}
-.info{float:left;font-size:12px;padding-left:15px;width:515px;overflow:hidden;line-height:20px;height:20px}
-.article_info{font-size:12px;padding-left:10px;line-height:22px;color:#777}
+.info{float:left;font-size:12px;padding-left:0px;width:515px;overflow:hidden;line-height:20px;height:20px}
+.article_info{font-size:12px;padding-left:0px;line-height:22px;color:#777}
 .comments_num{float:right;font-size:12px;background:#dedede;padding:1px 3px 0 3px;line-height:20px;height:20px}
 .comments_num a:link,.comments_num a:visited{color:#555;text-shadow:1px 1px #eee;}
 .context{position:relative;overflow:hidden;}

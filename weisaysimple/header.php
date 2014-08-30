@@ -29,9 +29,11 @@
 <?php } else { ?><div class="toppage"><ul><?php wp_list_pages('depth=2&title_li='); ?></ul></div><?php } ?>
 <div id="rss"><ul>
 <li class="rssfeed"><a href="<?php bloginfo('rss2_url'); ?>" target="_blank" class="icon1" title="欢迎订阅<?php bloginfo('name'); ?>"></a></li>
+<!--
 <?php if (get_option('swt_tqq') == 'Display') { ?><li class="tqq"><a href="<?php echo stripslashes(get_option('swt_tqqurl')); ?>" target="_blank" class="icon2" title="我的腾讯微博"></a></li><?php { echo ''; } ?><?php } else { } ?>
 <?php if (get_option('swt_tsina') == 'Display') { ?><li class="tsina"><a href="<?php echo stripslashes(get_option('swt_tsinaurl')); ?>" target="_blank" class="icon3" title="我的新浪微博"></a></li><?php { echo ''; } ?><?php } else { } ?>
 <?php if (get_option('swt_mailqq') == 'Display') { ?><li class="rssmail"><a href="http://mail.qq.com/cgi-bin/feed?u=<?php bloginfo('rss2_url'); ?>" target="_blank" class="icon4" title="用QQ邮箱阅读空间订阅我的博客"></a></li><?php { echo ''; } ?><?php } else { } ?>
+-->
 </ul></div>
 <div class="clear"></div>
 </div>
