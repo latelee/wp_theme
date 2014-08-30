@@ -31,7 +31,7 @@
     else the_content();
 }?><span class="more"><a href="<?php the_permalink() ?>" title="详细阅读 <?php the_title(); ?>" rel="nofollow">阅读全文</a></span></div>
 <div class="clear"></div>
-<div class="info">作者：<?php the_author() ?> | 分类：<?php the_category(', ') ?> <?php if(function_exists('the_views')) { echo '| 阅读：'; the_views(); } ?> <?php the_tags('| 标签：', ', ', ''); ?></div><div class="comments_num"><?php comments_popup_link ('抢沙发','1条评论','%条评论'); ?></div>
+<div class="info">作者：<?php the_author() ?> | 分类：<?php the_category(', ') ?> <?php if(function_exists('the_views')) { echo '| 阅读：'; the_views(); } ?> <?php the_tags('| 标签：', ', ', ''); ?></div><div class="comments_num"><?php comments_popup_link ('无评论','1条评论','%条评论'); ?></div>
 </div></li></ul><div class="clear"></div>
 		<?php endwhile; else: ?>
 <div class="left">

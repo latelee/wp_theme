@@ -3,28 +3,21 @@
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具1') ) : ?>
 	<?php endif; ?>
 </div>
+
+<div class="clear"></div>
+<div class="widget"><div id="tab-title"><?php include('includes/r_tab.php'); ?></div></div>
 <div class="widget">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具2') ) : ?>
 	<?php endif; ?>
 </div>
-<div class="widget">
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具3') ) : ?>
-	<?php endif; ?>
-</div>
-<div class="clear"></div>
-<div class="widget"><div id="tab-title"><?php include('includes/r_tab.php'); ?></div></div>
 
 <?php if (get_option('swt_ada') == 'Display') { ?>
 <div class="widget"><h3>广告</h3><?php echo stripslashes(get_option('swt_adacode')); ?></div><?php { echo ''; } ?><?php } else { } ?>
 
-
-<div class="clear"></div>
-<div class="widget"><div class="top_comment">
-	<?php if (get_option('swt_wallreaders') == 'Hide') { ?>
-	<?php { echo ''; } ?>
-	<?php } else { include(TEMPLATEPATH . '/includes/top_comment.php'); } ?></div>
+<div class="widget">
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具3') ) : ?>
+	<?php endif; ?>
 </div>
-
 
 <div class="clear"></div>
 <div class="widget"><?php include('includes/r_comment.php'); ?></div>

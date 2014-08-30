@@ -222,7 +222,7 @@ ol.commentlist li div.floor{float:right;color:#bbb}
 #respond{padding:5px 10px 10px;overflow:hidden;}
 #respond_box{clear:both;border-top:1px solid #ddd;}
 #respond h3{margin:5px 0 6px 0;}
-#comment{background:#fff url(images/comment.gif) no-repeat center;}
+#comment{background:#fff no-repeat center;}
 #commentform p{color:#333;}
 #commentform label{color:#868686;}
 #commentform input{border:1px solid #ddd;width:160px;margin:4px 5px 4px 0;padding:3px;box-shadow:inset 2px 3px 5px #eee;}

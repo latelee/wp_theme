@@ -21,7 +21,7 @@
  <?php else : // this is displayed if there are no comments so far ?>
 	<?php if ('open' == $post->comment_status) : ?>
 		<!-- If comments are open, but there are no comments. -->
-		<h3 id="comments" style="margin-bottom:10px"><?php the_title(); ?>：等您坐沙发呢！</h3>
+		<h3 id="comments" style="margin-bottom:10px">目前暂无评论</h3>
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
 		<p class="nocomments">报歉!评论已关闭.</p>
@@ -77,7 +77,7 @@
 		</p>
 		<p>
 			<input type="text" name="email" id="email" class="commenttext" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-			<label for="email">邮箱<?php if ($req) echo " *"; ?> <a id="Get_Gravatar"  title="查看如何申请一个自己的Gravatar全球通用头像" target="_blank" href="http://www.weisay.com/blog/apply-gravatar.html">（教你设置自己的个性头像）</a></label>
+			<label for="email">邮箱<?php if ($req) echo " *"; ?></label>
 		</p>
 		<p>
 			<input type="text" name="url" id="url" class="commenttext" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
