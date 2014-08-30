@@ -1,5 +1,5 @@
 <div class="clear"></div>
-<div id="footer">Copyright <?php echo comicpress_copyright(); ?> <?php bloginfo('name'); ?>. Powered by <a href="http://www.wordpress.org/" rel="external">WordPress</a>.
+<div id="footer">Copyright <?php echo comicpress_copyright(); ?> <a href="<?php bloginfo('siteurl'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>. Powered by <a href="http://www.wordpress.org/" rel="external">WordPress</a>.
 <?php wp_footer(); ?>
 <a href="http://www.miitbeian.gov.cn/" rel="external nofollow">桂ICP备10003672号.</a>
 </div>

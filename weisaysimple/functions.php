@@ -289,10 +289,8 @@ global $commentcount,$wpdb, $post;
 					<div class="floor"><?php
  if(!$parent_id = $comment->comment_parent){
    switch ($commentcount){
-     case 2 :echo "沙发";--$commentcount;break;
-     case 3 :echo "板凳";--$commentcount;break;
-     case 4 :echo "地板";--$commentcount;break;
-     default:printf('%1$s楼', --$commentcount);
+     default:printf('%1$s楼', --$commentcount); break;
+    
    }
  }
  ?>
@@ -311,7 +309,7 @@ function weisay_end_comment() {
 		echo '</li>';
 }
 function weisay_copyright() {
-echo 'Thanks <a href="http://www.weisay.com/" rel="external">Weisay</a> for the theme. Modified by <a href="http://www.latelee.org/">Late Lee</a>.';
+echo 'Theme by <a href="http://www.weisay.com/" rel="external">Weisay</a>. Modified by <a href="http://www.latelee.org/">Late Lee</a>.';
 }
 add_action('wp_footer', 'weisay_copyright');
 
@@ -333,6 +331,9 @@ function comicpress_copyright() {
     post_status = 'publish'
     ");
     $output = '';
+    // 因为重新建立了数据库，但网站是2010的，所以这样改
+    if ($copyright_dates[0]->firstdate = '2014')
+        $copyright_dates[0]->firstdate = '2010';
     if($copyright_dates) {
     $copyright = "&copy; " . $copyright_dates[0]->firstdate;
     if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
@@ -363,7 +364,7 @@ function comment_mail_notify($comment_id) {
        . nl2br($comment->comment_content) . '<br /></p>
       <p>您可以点击 <a href="' . htmlspecialchars(get_comment_link($parent_id)) . '">查看回复的完整內容</a></p>
       <p>欢迎再次光临 <a href="' . get_option('home') . '">' . get_option('blogname') . '</a></p>
-      <p>(此郵件由系統自動發出, 請勿回覆.)</p>
+      <p>(此邮件由系统自动发生, 请勿回复.)</p>
     </div>';
 	$message = convert_smilies($message);
     $from = "From: \"" . get_option('blogname') . "\" <$wp_email>";
