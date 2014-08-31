@@ -1,7 +1,6 @@
+
 <?php
 add_image_size('thumbnail', 140, 100, true);
-add_image_size('large',600,500);
-add_image_size('medium',300,260);
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 ?>
 <?php
@@ -94,7 +93,7 @@ if(1 != $pages){
 }
 
 //日志归档
-	class hacklog_archives
+class hacklog_archives
 {
 	function GetPosts() 
 	{

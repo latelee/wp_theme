@@ -36,7 +36,7 @@
         the_content('');
     elseif(function_exists('mb_strimwidth'))
         echo'<p>'
-        .mb_strimwidth($st,0,300,' ...')
+        .mb_strimwidth($st,0,300,'   ')
         .'</p>';
     else the_content();
 }?></div>
