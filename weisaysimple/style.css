@@ -247,5 +247,4 @@ html body{_background-attachment:fixed;}
 #ct{background:url(images/roll.png) no-repeat 0 -93px;}
 #roll{display:block;width:15px;margin-right:-295px;position:fixed;right:50%;top:43%;_margin-right:-300px;_position:absolute;_margin-top:180px;_top:expression(eval(document.documentElement.scrollTop));}
 /** 底部 **/
-#footer{text-align:center;height:40px;background:url(images/line.gif) repeat-x top;padding-top:20px;font-size:12px;margin-top:5px;color:#777}
-#footer a:link,#footer a:visited{color:#777}
+#footer{text-align:center;background:url(images/line.gif) repeat-x top;padding-top:20px;font-size:12px;margin-top:5px;}
