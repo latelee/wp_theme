@@ -1,5 +1,5 @@
 /*
-	Theme Name: Weisay Simple
+	Theme Name: Weisay Simple-LL
 	Theme URL: http://www.weisay.com/blog/wordpress-theme-weisay-simple.html
 	Description: 简约而不简单的主题，一直被抄袭，从未被超越！获得此主题使用帮助<a href="http://www.weisay.com/blog/wordpress-theme-weisay-simple.html">weisay.com</a>。
 	Author: Weisay
@@ -69,7 +69,7 @@ a:hover{text-decoration:underline}
 .topnav li li.li01 ul{top:-2px}
 .topnav li li.li01 ul a{color:#0088dd;}
 .topnav li li.li01 ul a:hover{border-bottom:1px #0088dd solid;}
-#rss{float:right;border:none;margin-right:12px;}
+#rss{float:right;border:none;margin-right:16px;}
 #rss ul{list-style:none;}
 #rss ul li{margin:2px 0 0 14px;float:right;}
 #rss ul li.rssmail{margin-left:0px;}
@@ -93,15 +93,17 @@ a:hover{text-decoration:underline}
 .post_date .date_d{padding-left:3px;text-align:center;font-size:25px;margin-top:-5px;font-family:Georgia,Arial,Tahoma,Geneva;font-weight:bold}
 .post_date .date_y{text-align:center;font-size:11px;font-family:Verdana}
 */
-.article{float:left;width:870px;border-bottom:1px #ddd solid;overflow:hidden;}
+.article{float:left;margin-bottom:10px;width:870px;border-bottom:1px #ddd solid;overflow:hidden;}
 .article_page{width:870px;}
 .article li{list-style:none}
 .articles{float:left;width:870px;border-bottom:1px #ddd solid;padding:10px 0 10px 0;overflow:hidden}
-.articles_page{width:680px;}
+.articles_page{width:870px;}
 .main ul li h2,.main .left h2{background:url(images/line.gif) repeat-x bottom;line-height:26px;padding:0 0 3px 0;}
 .main ul li h2.post-sticky{padding:0 0 3px 38px;}
 .main .left_page h2{padding-left:0px;}
 .articles h3{font-size:15px;}
+.postnavi1{float:left}
+.postnavi2{float:right}
 .new{margin-left:2px;position:absolute}
 i.sticky{background:url(images/top.gif) no-repeat;display:inline-block;height:17px;width:31px;margin-right:10px;margin-top:-4px;*margin-top:-1px;overflow:hidden;vertical-align:middle;vertical-align:-2px \9;*vertical-align:middle;}
 i.sticky_ordinary{margin-right:4px;}
@@ -109,8 +111,8 @@ i.sticky_ordinary{margin-right:4px;}
 .thumbnail img{position:absolute;z-index:3;}
 .entry_post{line-height:22px;padding-top:12px;}
 .more{float:right;font-size:12px;margin:-3px 0 8px 0;}
-.info{float:left;font-size:12px;width:515px;overflow:hidden;line-height:20px;height:20px}
-.article_info{font-size:12px;line-height:22px;color:#777}
+.info{float:left;font-size:12px;width:800px;overflow:hidden;line-height:20px;height:20px}
+.article_info{font-size:12px;line-height:22px;color:#777;margin-bottom:10px}
 .comments_num{float:right;font-size:12px;background:#dedede;padding:1px 3px 0 3px;line-height:20px;height:20px}
 .comments_num a:link,.comments_num a:visited{color:#555;text-shadow:1px 1px #eee;}
 .context{position:relative;overflow:hidden;}
@@ -230,7 +232,7 @@ ol.commentlist li div.floor{float:right;color:#bbb}
 #commentform label{color:#868686;}
 #commentform input{border:1px solid #ddd;width:160px;margin:4px 5px 4px 0;padding:3px;box-shadow:inset 2px 3px 5px #eee;}
 #commentform input:focus{border:1px solid #ccc;}
-#commentform textarea{width:72%;height:120px;font-size:13px;padding:4px;margin:4px 0 0 0;border:1px solid #ddd;box-shadow:inset 2px 3px 5px #eee;}
+#commentform textarea{width:90%;height:120px;font-size:13px;padding:4px;margin:4px 0 0 0;border:1px solid #ddd;box-shadow:inset 2px 3px 5px #eee;}
 #commentform textarea:focus{border:1px solid #ccc;}
 #commentform input#submit,#commentform input#reset{width:87px;height:26px;color:#393939;text-align:center;text-shadow:0px 1px 0px #fff;margin-top:8px;border:1px solid #ddd;}
 #commentform #submit:hover,#commentform #reset:hover{font-weight:bold;}

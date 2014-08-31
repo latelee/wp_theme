@@ -24,7 +24,7 @@
 		<h3 id="comments" style="margin-bottom:10px">目前暂无评论</h3>
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="nocomments">报歉!评论已关闭.</p>
+		<!--<p class="nocomments">报歉!评论已关闭.</p>-->
 	<?php endif; ?>
 	<?php endif; ?>
 	<?php if ('open' == $post->comment_status) : ?>

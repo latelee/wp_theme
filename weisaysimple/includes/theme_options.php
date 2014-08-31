@@ -92,14 +92,14 @@ $options = array (
             "type" => "select",
             "std" => "Display",
             "options" => array("Hide", "Display")),
-			
+/*			
 	array(  "name" => "是否显示侧边读者墙",
 			"desc" => "默认显示",
             "id" => $shortname."_wallreaders",
             "type" => "select",
             "std" => "Hide",
             "options" => array("Display", "Hide")),
-
+*/
 //SEO设置
     array(  "type" => "close"),
 	array(  "name" => "网站SEO设置(必填)",
@@ -134,7 +134,7 @@ $options = array (
             "desc" => "",
             "id" => $shortname."_builddate",
             "type" => "textarea",
-            "std" => "2007-04-22"),
+            "std" => "2010-04-28"),
 
 	array(	"name" => "首页展示友情链接",
             "desc" => "",
@@ -172,7 +172,7 @@ $options = array (
 			"desc" => "",
             "id" => $shortname."_beianhao",
             "type" => "textarea",
-            "std" => "沪ICP备20130829号"),
+            "std" => "桂ICP备10003672号"),
 
 //微博以及订阅设置
     array(  "type" => "close"),
@@ -420,49 +420,6 @@ $i++;
 </form>
  </div>
  </div>
-</div>
- <div id="theme_help">
-	<h1>主题使用帮助</h1>
-	<div id="help_article">
-		<?php
-			include_once(ABSPATH . WPINC . '/feed.php');
-			$rss = fetch_feed('http://www.weisay.com/blog/feed');			
-			if ( is_wp_error($rss) ) {
-				$error = $rss->get_error_code();
-				if($error == 'simplepie-error') {
-					echo "<div class='updated fade'><p>RSS订阅出错。(<code>". $error ."</code>)</p></div>";
-				}
-				return;
-				} 
-		?>
-        <?php
-			$items = $rss->get_items(0,4);
-        ?>
-		<h2 class="bg2">主题相关文章</h2>	
-        <ol>
-        <li><a href="http://www.weisay.com/blog/wordpress-theme-weisay-simple.html" target="_blank">Weisay Simple主题使用必看教程<font style="font-size:18px;"color=#ff0000><strong>&hearts;&hearts;&hearts;</strong></font></a></li>
-        <li><a href="http://www.weisay.com/blog/wordpress-featured-image-and-thumbnail.html" target="_blank">Weisay Simple特色图像功能使用教程<font style="font-size:18px;"color=#ff0000><strong>&hearts;</strong></font></a></li>
-        <li><a href="http://www.weisay.com/blog/wordpress-article-excerpt.html" target="_blank">Weisay Simple主题首页摘要使用的方法<font style="font-size:18px;"color=#ff0000><strong>&hearts;</strong></font></a></li>
-        <li><a href="http://www.weisay.com/blog/custom-wordpress-smiley-path.html" target="_blank">给Weisay Simple主题自定义表情路径的方法</a></li>
-        <li><a href="http://www.weisay.com/blog/navigation-menu-add-icon.html" target="_blank">给Weisay Simple主题导航菜单前面加上个性小图标</a></li>
-        <li><a href="http://www.weisay.com/blog/auto-highslide.html" target="_blank">WordPress图片插件推荐：Auto Highslide修改版</a></li>
-			<?php
-				if (empty($items))
-					echo '<li>暂无内容。</li>';
-				else
-					foreach ( $items as $item ) : ?>
-					<li>
-						<a target="_blank" href='<?php echo esc_url( $item->get_permalink() ); ?>'><?php echo ( $item->get_title() ); ?></a>
-					</li>
-			<?php endforeach; ?>
-			<a style="float:right;padding-top:5px;padding-right:10px;font-weight:700;" target="_blank" href='http://www.weisay.com/blog/'>更多内容>></a>
-        </ol>
-
-		<h2 class="bg3">捐助：</h2>
-		<p>您的支持，是对威言威语最大的鼓励和肯定！<br />
-		<strong>支付宝：<span class="mail">weisay@foxmail.com</span></strong></p>
-		<a target="_blank" href='http://me.alipay.com/weisay'> <img src='https://img.alipay.com/sys/personalprod/style/mc/btn-index.png' /> </a>
-	</div>
 </div>
 <?php
 }

@@ -1,5 +1,4 @@
 <div class="relatedposts">
-<h3>您可能还会对这些文章感兴趣！</h3>
 <ul>
 	<?php
 	$post_num = 12; 
@@ -9,6 +8,9 @@
 	$tags = ''; $i = 0;
 	$exists_related_ids[] = $post->ID;
 	if ( get_the_tags( $post->ID ) ) {
+    ?>
+    <h3>相关文章</h3>
+    <?php
 	foreach ( get_the_tags( $post->ID ) as $tag ) $tags .= $tag->slug . ',';
 	$tags = strtr(rtrim($tags, ','), ' ', '-');
 	$myposts = get_posts('numberposts='.$post_num.'&orderby=comment_count&tag='.$tags.'&exclude='.$post->ID);
@@ -21,6 +23,10 @@
 	$i += 1;
 	}
 	}
+    else
+    {?>
+    <h3>暂无相关文章</h3>
+    <?php }
 	if ( $i < $post_num ) {
 	$post = $tmp_post; setup_postdata($post);
 	$cats = ''; 

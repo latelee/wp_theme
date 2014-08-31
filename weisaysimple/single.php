@@ -10,7 +10,7 @@
 <div class="article">
     <div class="clear"></div>
     <div class="context">
-            <?php if (get_option('swt_adb') == 'Display') { ?><div style="float:right;border:1px #ccc solid;padding:2px;overflow:hidden;margin:12px 0 1px 2px;"><?php echo stripslashes(get_option('swt_adbcode')); ?></div><?php { echo ''; } ?><?php } else { } ?><?php the_content('Read more...'); ?><?php wp_link_pages(); ?><p>本文固定链接: <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_permalink() ?></a></p></div>
+            <?php if (get_option('swt_adb') == 'Display') { ?><div style="float:right;border:1px #ccc solid;padding:2px;overflow:hidden;margin:12px 0 1px 2px;"><?php echo stripslashes(get_option('swt_adbcode')); ?></div><?php { echo ''; } ?><?php } else { } ?><?php the_content('Read more...'); ?><?php wp_link_pages(); ?><p><p><p>本文固定链接: <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_permalink() ?></a></p></div>
             <?php if (get_option('swt_adc') == 'Display') { ?><p style="text-align:center;"><?php echo stripslashes(get_option('swt_adccode')); ?></p><?php { echo ''; } ?><?php } else { } ?>
     </div>
 </div>
@@ -21,7 +21,8 @@
 </div>
 
 <div class="articles">
-<?php previous_post_link('【上一篇】%link') ?><br/><?php next_post_link('【下一篇】%link') ?>
+<div class="postnavi1"><?php previous_post_link('【上一篇】%link') ?></div>
+<div class="postnavi2"><?php next_post_link('【下一篇】%link') ?></div>
 </div>
 
 <div class="articles">
