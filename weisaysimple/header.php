@@ -5,8 +5,8 @@
 <?php if (get_option('swt_alt_stylesheet')==''):?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css?ver=1.62" />
 <?php endif;?>
-<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
+<link rel="alternate" type="application/rss+xml" title="迟思堂工作室 RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+<link rel="alternate" type="application/atom+xml" title="迟思堂工作室 Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.min.js"></script>
@@ -28,7 +28,7 @@
 <?php { echo ''; } ?>
 <?php } else { ?><div class="toppage"><ul><?php wp_list_pages('depth=2&title_li='); ?></ul></div><?php } ?>
 <div id="rss"><ul>
-<li class="rssfeed"><a href="<?php bloginfo('rss2_url'); ?>" target="_blank" class="icon1" title="欢迎订阅<?php bloginfo('name'); ?>"></a></li>
+<li class="rssfeed"><a href="<?php bloginfo('rss2_url'); ?>" target="_blank" class="icon1" title="欢迎订阅迟思堂工作室"></a></li>
 <!--
 <?php if (get_option('swt_tqq') == 'Display') { ?><li class="tqq"><a href="<?php echo stripslashes(get_option('swt_tqqurl')); ?>" target="_blank" class="icon2" title="我的腾讯微博"></a></li><?php { echo ''; } ?><?php } else { } ?>
 <?php if (get_option('swt_tsina') == 'Display') { ?><li class="tsina"><a href="<?php echo stripslashes(get_option('swt_tsinaurl')); ?>" target="_blank" class="icon3" title="我的新浪微博"></a></li><?php { echo ''; } ?><?php } else { } ?>
@@ -38,10 +38,8 @@
 <div class="clear"></div>
 </div>
 <div id="top_logo">
-            <?php if (get_option('swt_logo') == 'Display') { ?>
-    <a href="<?php bloginfo('siteurl'); ?>" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"><div class="logo"></div></a>
-        <div id="blogname"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a><div id="blogtitle"><?php bloginfo('description'); ?></div></div>
-			<?php }else { include(TEMPLATEPATH . '/includes/logo.php'); } ?>
+    <a href="<?php bloginfo('siteurl'); ?>" title="迟思堂工作室 - 李迟的技术主页"><div class="logo"></div></a>
+    <div id="blogname"><a href="<?php echo get_option('home'); ?>">迟思堂工作室</a><div id="blogtitle">李迟的技术主页</div></div>
 </div>
 		<div class="search">		
 			<form id="searchform" method="get" action="<?php bloginfo('home'); ?>">
