@@ -26,7 +26,7 @@ a:hover{text-decoration:underline}
 /*由于整个网站的logo和标题都纳入top_logo这个div中，所以指定其宽度，宽度由下面的估算出来*/
 #top_logo{float:left;height:80px;width:480px;}
 .logo{float:left;display:inline;background:url(images/logo.gif) no-repeat;margin-top:15px;margin-left:10px;width:300px;height:60px;_margin-left:1px;}
-.subpage{width:1230px;padding-left:0}
+.subpage{padding-left:0}
 .toppage{float:left;font-size:13px;position:relative;}
 .toppage ul{list-style:none;margin:0;padding:0;z-index:999;}
 .toppage ul ul{display:none;position:absolute;top:30px;left:0;z-index:999;}
@@ -36,18 +36,12 @@ a:hover{text-decoration:underline}
 .page_menu{}
 .page_menu ul{list-style:none;float:left;}
 .page_menu li{text-shadow:1px 1px #fff;color:#FFFFFF;float:left;padding:8px 10px 0 10px;}
-.search{margin-top:36px;float:right;margin-right:12px}
-#searchform{background:#dadada;border-radius:3px;padding:3px 3px 3px 3px;}
-#searchform label{display:none;}
-#searchform input{width:186px;height:24px;line-height:24px;vertical-align:middle;padding:0 5px;}
-#searchform button,#searchform #searchsubmit{width:58px;text-align:center;height:26px;line-height:26px;background:#666;margin-left:-4px;border:none;color:#fff;cursor:pointer;vertical-align:middle;text-shadow:1px 1px #333;}
-.search button:hover,.main ul li h2 a:link,.main ul li h2 a:visited,.main .left h2 a:link,.main .left h2 a:visited{color:#222;}
 /*blogname和blogtitle将logo图片和文字放到同一行*/
 #blogname{float:right;font-size:25px;padding-left:20px;margin-top:15px;}
 #blogname a:link,#blogname a:visited{color:#222;}
 #blogname a:hover,.main ul li h2 a:hover,.main .left h2 a:hover{color:#626262;text-decoration:none;}
 #blogtitle{padding-left:25px;padding-top:5px;color:#666;font-size:14px;font-weight:normal;}
-.topnav{float:left;width:990px;height:34px;padding:0;overflow:hidden;}
+.topnav{float:left;width:1220px;height:34px;padding:0;overflow:hidden;}
 .topnav li img{_padding-top:11px;}
 .topnav ul{list-style:none;margin:0;padding:0;position:absolute;z-index:999;}
 .topnav li{height:34px;line-height:34px;float:left;position:relative;font-weight:bold;padding-right:12px;}
@@ -69,6 +63,13 @@ a:hover{text-decoration:underline}
 .topnav li li.li01 ul{top:-2px}
 .topnav li li.li01 ul a{color:#0088dd;}
 .topnav li li.li01 ul a:hover{border-bottom:1px #0088dd solid;}
+/*org .search{margin-top:36px;float:right;margin-right:12px}*/
+.search {float:right; position:relative;margin-top:7px}
+#searchform{background:#dadada;border-radius:1px;padding:1px;}
+#searchform label{display:none;}
+#searchform input{width:200px;height:26px;line-height:25px;vertical-align:middle;padding:0 5px;}
+#searchform button,#searchform #searchsubmit{width:58px;text-align:center;height:26px;line-height:26px;background:#666;margin-left:-4px;border:none;color:#fff;cursor:pointer;vertical-align:middle;text-shadow:1px 1px #333;}
+.search button:hover,.main ul li h2 a:link,.main ul li h2 a:visited,.main .left h2 a:link,.main .left h2 a:visited{color:#222;}
 #rss{float:right;border:none;margin-right:16px;}
 #rss ul{list-style:none;}
 #rss ul li{margin:2px 0 0 14px;float:right;}

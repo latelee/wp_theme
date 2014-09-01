@@ -5,7 +5,6 @@
 </p>This site is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License.
 </div>
 </div>
-<!-- paypal donate -->
 <div style="text-align: center; margin-top:5px;">
     <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank"  method="post">
         <input type="hidden" name="cmd" value="_donations">
