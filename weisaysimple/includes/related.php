@@ -1,5 +1,6 @@
 <div class="relatedposts">
 <ul>
+<h3>你可能感兴趣的文章</h3>
 	<?php
 	$post_num = 12; 
 	global $post;
@@ -9,7 +10,6 @@
 	$exists_related_ids[] = $post->ID;
 	if ( get_the_tags( $post->ID ) ) {
     ?>
-    <h3>相关文章</h3>
     <?php
 	foreach ( get_the_tags( $post->ID ) as $tag ) $tags .= $tag->slug . ',';
 	$tags = strtr(rtrim($tags, ','), ' ', '-');
@@ -23,10 +23,6 @@
 	$i += 1;
 	}
 	}
-    else
-    {?>
-    <h3>暂无相关文章</h3>
-    <?php }
 	if ( $i < $post_num ) {
 	$post = $tmp_post; setup_postdata($post);
 	$cats = ''; 
