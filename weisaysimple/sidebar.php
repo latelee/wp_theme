@@ -1,11 +1,22 @@
 <div id="sidebar">
+
 <div class="widget">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具1') ) : ?>
 	<?php endif; ?>
 </div>
 
+<h3>热门文章</h3>
+<ul>
+    <?php if (function_exists( 'get_most_viewed')): ?>
+    <?php get_most_viewed( 'post',10); ?>
+    <?php endif; ?>
+</ul>
+<h3>热评文章</h3>
+<ul>
+<?php simple_get_most_viewed(); ?>
+</ul>
+
 <div class="clear"></div>
-<div class="widget"><div id="tab-title"><?php include('includes/r_tab.php'); ?></div></div>
 <div class="widget">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('小工具2') ) : ?>
 	<?php endif; ?>
@@ -49,5 +60,5 @@ else { ?>
 				<li><a href="<?php bloginfo('url') ?>/wp-admin/edit-comments.php">评论管理</a></li>
 				<li><a href="<?php bloginfo('url') ?>/wp-login.php?action=logout&amp;redirect_to=<?php echo urlencode($_SERVER['REQUEST_URI']) ?>">注销</a></li></div>
 <?php } ?></div>
-</div>
-</div>
+
+ </div>

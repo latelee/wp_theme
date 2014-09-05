@@ -307,6 +307,7 @@ global $commentcount,$wpdb, $post;
 function weisay_end_comment() {
 		echo '</li>';
 }
+// - 暂时不调用
 function weisay_copyright() {
 echo 'Theme by <a href="http://www.weisay.com/" rel="external">Weisay</a>. Modified by <a href="http://www.latelee.org/">Late Lee</a>.';
 }
@@ -317,7 +318,7 @@ function weisay_get_avatar($email, $size = 48){
 return get_avatar($email, $size);
 }
 
-//自动生成版权时间
+//自动生成版权时间 - 暂时不调用
 function comicpress_copyright() {
     global $wpdb;
     $copyright_dates = $wpdb->get_results("
@@ -374,4 +375,59 @@ function comment_mail_notify($comment_id) {
 }
 add_action('comment_post', 'comment_mail_notify');
 //全部设置结束
+/// get_most_viewed_format
+function get_most_viewed_format($mode = '', $limit = 10, $show_date = 0, $term_id = 0, $beforetitle= '(', $aftertitle = ')', $beforedate= '(', $afterdate = ')', $beforecount= '(', $aftercount = ')') {
+  global $wpdb, $post;
+  $output = '';
+  $mode = ($mode == '') ? 'post' : $mode;
+  $type_sql = ($mode != 'both') ? "AND post_type='$mode'" : '';
+  $term_sql = (is_array($term_id)) ? "AND $wpdb->term_taxonomy.term_id IN (" . join(',', $term_id) . ')' : ($term_id != 0 ? "AND $wpdb->term_taxonomy.term_id = $term_id" : '');
+  $term_sql.= $term_id ? " AND $wpdb->term_taxonomy.taxonomy != 'link_category'" : '';
+  $inr_join = $term_id ? "INNER JOIN $wpdb->term_relationships ON ($wpdb->posts.ID = $wpdb->term_relationships.object_id) INNER JOIN $wpdb->term_taxonomy ON ($wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id)" : '';
+ 
+  // database query
+  $most_viewed = $wpdb->get_results("SELECT ID, post_date, post_title, (meta_value+0) AS views FROM $wpdb->posts LEFT JOIN $wpdb->postmeta ON ($wpdb->posts.ID = $wpdb->postmeta.post_id) $inr_join WHERE post_status = 'publish' AND post_password = '' $term_sql $type_sql AND meta_key = 'views' GROUP BY ID ORDER BY views DESC LIMIT $limit");
+  if ($most_viewed) {
+   foreach ($most_viewed as $viewed) {
+    $post_ID    = $viewed->ID;
+    $post_views = number_format($viewed->views);
+    $post_title = esc_attr($viewed->post_title);
+    $get_permalink = esc_attr(get_permalink($post_ID));
+    $output .= "$post_title";
+    if ($show_date) {
+      $posted = date(get_option('date_format'), strtotime($viewed->post_date));
+      $output .= "$beforedate $posted $afterdate";
+    }
+    $output .= "$beforecount $post_views $aftercount";
+   }
+  } else {
+   $output = "N/An";
+  }
+  echo $output;
+}
+
+
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 View";
+    }
+    return $count.' Views';
+}
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
 ?>
