@@ -10,7 +10,6 @@
 	        </a>
 		</span>
 		<span class="comment-s"><i class="icon-comment"></i><?php comments_popup_link( '抢沙发', '还有板凳', '评论 % ' ); ?></span>
-		<span class="share-s"><a href="#share" id="share-main-s" title="分享"><i class="icon-share"></i>分享</a></span>
 	</div>
 	<div class="clear"></div>
 </div>

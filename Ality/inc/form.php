@@ -1,5 +1,5 @@
 <?php
-$to = "zmingcx@188.com"; //将此电子邮件地址改为自己的。
+$to = "li@latelee.org"; //将此电子邮件地址改为自己的。
 
 $name = $_POST['name']; 
 $email = $_POST['email']; 
