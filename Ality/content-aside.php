@@ -24,7 +24,7 @@
 			<div class="clear"></div>
 			<div class="entry-meta">
 				<span class="meta-site">
-					<span class="date"><i class="icon-date"></i><?php the_time( 'Y年m月d日' ) ?></span>
+					<span class="date"><i class="icon-date"></i><?php the_time('Y-m-d H:i') ?></span>
 					<span class="cat"><i class="icon-cat"></i><?php the_category( ', ' ) ?></span>
 					<span class="comment"><i class="icon-comment"></i><?php comments_popup_link( '暂无评论', '评论 1 条', '评论 % 条' ); ?></span>
 					<?php get_template_part( 'inc/like' ); ?>

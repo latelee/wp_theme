@@ -1,11 +1,11 @@
 <?php
 function the_crumbs() {
 		if (is_home()) {
-			echo '<nav class="crumbs">文章排序：';
+			echo '<nav class="crumbs">首页文章排序：';
 			echo get_template_part( 'inc/order' );
 		}
 		if (!is_home()) {
-			echo '<nav class="crumbs">现在位置： ';
+			echo '<nav class="crumbs">当前位置： ';
 			echo '<a title="返回首页" href="';
 			echo get_settings('home');
 			echo '">';

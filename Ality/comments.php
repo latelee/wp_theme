@@ -115,7 +115,6 @@ if ( post_password_required() ) {
 				<?php endif; ?>
 
 		        <p class="comment-tool">
-		        	<a class="tool-img" href='javascript:embedImage();' title="插入图片"><i class="icon-img"></i></a>
 		        	<a class="smiley" href="" title="插入表情"><i class="icon-smiley"></i></a>
 		        	<span class="smiley-box"><?php get_template_part( 'inc/smiley' ); ?></span>
 		        </p>

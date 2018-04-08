@@ -276,7 +276,7 @@ function cx_images($content) {
   $content = preg_replace('/\[img=?\]*(.*?)(\[\/img)?\]/e', '"<img src=\"$1\" alt=\"" . basename("$1") . "\" />"', $content);
   return $content;
 }
-add_filter('comment_text', 'cx_images');
+//add_filter('comment_text', 'cx_images');
 
 // 下载按钮
 function button_a($atts, $content = null) {
