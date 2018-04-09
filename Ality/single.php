@@ -1,8 +1,9 @@
-<?php get_header(); ?>
+﻿<?php get_header(); ?>
 <div id="primary" class="site-content">
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="single-content">
 		<?php get_template_part( 'content' ); ?>
+		<?php get_template_part( 'inc/donate_single' ); ?>
 		<?php get_template_part( 'inc/social' ); ?>
 	</div>
 	<div class="single-tag">标签：<?php the_tags('','',''); ?></div>

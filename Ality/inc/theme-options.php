@@ -176,69 +176,15 @@ array( "name" => $themename." Options",
             "type" => "text",
             "std" => ""),
 
-// 广告设置
-
+    // 广告设置
     array( "type" => "close"),
-	array( "name" => "广告设置",
+    array( "name" => "广告设置",
        "type" => "section"),
-	array( "type" => "open"),
+    array( "type" => "open"),
 
-	array(  "name" => "关闭导航下面广告位",
-            "id" => $shortname."_g-nav",
-            "type" => "checkbox",
-			"std" => "false"),
-
-	array(	"name" => "输入导航下面广告代码",
-            "desc" => "",
-            "id" => $shortname."_nav-ad",
-            "type" => "textarea",
-            "std" => '<a href="http://idc.wopus.org/" target="_blank"><img src="' . get_bloginfo('template_directory') . '/img/xx/1080.png" alt="博客主机" /></a>',
-			"section" => '<div class="part"></div>'),
-
-	array(  "name" => "关闭文章列表广告位",
-            "id" => $shortname."_g-posts",
-            "type" => "checkbox",
-			"std" => "false"),
-
-	array(	"name" => "输入文章列表广告代码",
-            "desc" => "",
-            "id" => $shortname."_posts-ad",
-            "type" => "textarea",
-            "std" => '<a href="http://idc.wopus.org/" target="_blank"><img src="' . get_bloginfo('template_directory') . '/img/xx/760.png" alt="博客主机" /></a>',
-			"section" => '<div class="part"></div>'),
-
-	array(  "name" => "关闭正文标题广告位",
-            "id" => $shortname."_g-single",
-            "type" => "checkbox",
-			"std" => "false"),
-
-	array(	"name" => "输入正文标题广告代码",
-            "desc" => "",
-            "id" => $shortname."_single-ad",
-            "type" => "textarea",
-            "std" => '<a href="http://idc.wopus.org/" target="_blank"><img src="' . get_bloginfo('template_directory') . '/img/xx/760.png" alt="博客主机" /></a>',
-			"section" => '<div class="part"></div>'),
-
-	array(  "name" => "关闭评论广告位",
-            "id" => $shortname."_g-comment",
-            "type" => "checkbox",
-			"std" => "false"),
-
-	array(	"name" => "输入评论广告代码",
-            "desc" => "",
-            "id" => $shortname."_comment-ad",
-            "type" => "textarea",
-            "std" => '<a href="http://idc.wopus.org/" target="_blank"><img src="' . get_bloginfo('template_directory') . '/img/xx/760.png" alt="博客主机" /></a>',
-			"section" => '<div class="part"></div>'),
-
-	array(	"name" => "输入下载弹窗广告代码",
-            "desc" => "",
-            "id" => $shortname."_file-ad",
-            "type" => "textarea",
-            "std" => '<a href="http://idc.wopus.org/" target="_blank"><img src="' . get_bloginfo('template_directory') . '/img/xx/500.jpg" alt="博客主机" width="500" height="200" /></a>'),
-
-	array(	"type" => "close")
 );
+
+
 // 定义管理面板
 function mytheme_add_admin() {
 global $themename, $shortname, $options;
@@ -275,10 +221,6 @@ if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><stron
 <div class="wrap rm_wrap">
 <h2><?php echo $themename; ?>主题选项</h2>
 <p>
-	<font style="font-size:20px;"color=#ff0000><strong> &hearts; </strong></font>支持主题设计者：<a href="http://zmingcx.com" target="_blank">知更鸟</a>，支付宝：zmingcx@126.com
-	&nbsp;<span class="switch" onclick="openShutManager(this,'box',false,'关闭分类ID','显示分类ID')">显示分类ID</span>
-	&nbsp;<a href="http://zmingcx.com/Wordpress-theme-ality.html" target="_blank">查看更新</a>
-
 	<div class="open">
 		<div class="odiv" id="box" style="display:none">
 			<b>分类ID</b>

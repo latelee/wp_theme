@@ -184,7 +184,6 @@ require get_template_directory() . '/inc/functions/widgets.php';
 
 // 主题设置
 require get_template_directory() . '/inc/theme-options.php';
-require get_template_directory() . '/inc/guide.php';
 
 // 评论模板
 require get_template_directory() . '/inc/functions/comment-template.php';

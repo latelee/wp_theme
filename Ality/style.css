@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: Ality
 Theme URI: http://zmingcx.com/wordpress-theme-ality.html
 Author: 知更鸟
@@ -73,9 +73,9 @@ a, button, input {
 	padding: 0 0 0 10px;
 }
 .logo {
-	background: url(img/logo.png) no-repeat;
-	width: 220px;
-	height: 53px;
+	background: url(img/logo.gif) no-repeat;
+	width: 454px;
+	height: 60px;
 	text-indent: -10000px;
 	cursor: pointer;
 }
@@ -492,7 +492,7 @@ a, button, input {
 /** 公告 **/
 .bulletin_div {
 	float: right;
-	width: 55%;
+	width: 50%;
 	line-height: 28px;
 	margin: 8px 60px 0 0;
 	overflow: hidden;
