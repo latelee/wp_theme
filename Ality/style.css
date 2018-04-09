@@ -399,7 +399,7 @@ a, button, input {
 	margin: 12px 0 15px 0;
 }
 #s, .swap_value{
-	width: 65%;
+	width: 70%;
 	height: 31px;
 	padding: 0 5px;
 	border: 1px solid #ccc;
@@ -407,7 +407,7 @@ a, button, input {
 }
 #searchform #searchsubmit, #searchsubmit {
 	background: #04a4cc;
-	width: 60px;
+	width: 70px;
 	height: 31px;
 	color: #fff;
 	margin: 1px 0 0 0;

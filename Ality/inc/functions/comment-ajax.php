@@ -75,10 +75,10 @@ if ( $user->ID ) {
 $comment_type = '';
 
 if ( get_option('require_name_email') && !$user->ID ) {
-	if ( 6 > strlen($comment_author_email) || '' == $comment_author )
-		err( __('提示：必须填写昵称及邮件。') ); // 将 wp_die 改为错误提示
-	elseif ( !is_email($comment_author_email))
-		err( __('提示：请输入一个有效的电子邮件地址。') );// 将 wp_die 改为错误提示
+	if ( '' == $comment_author )
+		err( __('提示：必须填写昵称！') ); // 将 wp_die 改为错误提示
+	// elseif ( !is_email($comment_author_email))
+	//	err( __('提示：请输入一个有效的电子邮件地址。') );// 将 wp_die 改为错误提示
 }
 
 if ( '' == $comment_content )

@@ -105,11 +105,11 @@ if ( post_password_required() ) {
 					</p>
 					<p class="comment-form-email">
 						<input type="text" name="email" id="email" class="commenttext" value="<?php echo $comment_author_email; ?>" tabindex="2" />
-						<label for="email">邮箱<?php if ($req) echo "（必填）"; ?></label>
+						<label for="email">邮箱<?php if ($req) echo "（选填）"; ?></label>
 					</p>
 					<p class="comment-form-url">
 						<input type="text" name="url" id="url" class="commenttext" value="<?php echo $comment_author_url; ?>" tabindex="3" />
-						<label for="url">网址</label>
+						<label for="url">网址<?php if ($req) echo "（选填）"; ?></label>
 					</p>
 				</div>
 				<?php endif; ?>

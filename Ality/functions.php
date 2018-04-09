@@ -368,7 +368,7 @@ function colorCloudCallback($matches) {
 	$text = preg_replace($pattern, "style=\"color:#{$color};$2;\"", $text);
 	return "<a $text>";
 }
-add_filter('wp_tag_cloud', 'colorCloud', 1);
+//add_filter('wp_tag_cloud', 'colorCloud', 1);
 
 // 后台字体
 function admin_lettering(){
